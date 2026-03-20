@@ -78,7 +78,7 @@ class Server:
 
         buf.write(b"Guests:\n")
 
-        for config in self.guests.guests:
+        for config in self.guests.iterate_guests():
             if self.guests.is_special(config):
                 buf.write(b"* ")
             else:
